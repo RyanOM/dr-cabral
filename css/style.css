@@ -180,12 +180,35 @@ th {
         
 }
 .atuacao ul li {
-font-size: 1.25em;
-  line-height: 1.6;
-  color: #777;     
+    font-size: 1.25em;
+    line-height: 1.6;
+    color: #777;     
+    text-decoration: none; 
 }
 
 
 .footinfo {
     font-size: 12px;
+}
+
+ul.social-buttons {
+    margin-bottom: 0;
+    margin-top: 15px;
+    
+}
+ul.social-buttons li a {
+  display: block;
+  background-color: #777;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  font-size: 20px;
+  line-height: 40px;
+  color: white;
+  outline: none;
+}
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+  background-color: #444;
 }
