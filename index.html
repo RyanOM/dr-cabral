@@ -327,4 +327,52 @@
 </script>
 </body>
 
+<!-- Covid Popup -->
+
+<a href="#popup-box" id="pop" class="fancybox" rel="group"></a>
+<div id="popup-box">
+    <img src="img/Orientacoes%20pandemia%20-%20Plastica.png" alt="" class="img-responsive">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" />
+<style>
+
+    #popup-box {
+        display: none;
+        padding: 0 !important;
+    }
+
+</style>
+<script>
+     $(document).ready(function() {
+
+   let active = Cookies.get('active');
+   if (active == '42') {
+     return false; // cookie active do nothing
+   } else { //trigger popup and set a cookie
+     setTimeout(function() {
+       $(".fancybox").eq(0).trigger('click');
+     }, 500);
+     $(".fancybox")
+       .attr('rel', 'group')
+       .fancybox({
+         width: 530,
+         height: 444,
+         scrolling: 'auto'
+       });
+   }
+   Cookies.set('active', 'yes', {
+     expires: 0 // the number of days cookie  will be effective
+   });
+
+ });
+</script>
+<!-- END Covid Popup -->
+
+</body>
+</html>
+
+
 </html>
