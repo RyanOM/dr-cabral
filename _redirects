@@ -1,0 +1,22 @@
+# Redirects from old site URLs to new pages
+
+# Old pages to new equivalents
+/index.html          /                    301
+/sobre.html          /sobre.html          200
+/contato.html        /contato.html        200
+
+# Old English URLs (in case anyone bookmarked them)
+/about.html          /sobre.html          301
+/services.html       /cirurgias.html      301
+/gallery.html        /clinicas.html       301
+/contact.html        /contato.html        301
+/privacy.html        /privacidade.html    301
+/privacy-policy.html /privacidade.html    301
+
+# Handle old root-level pages if accessing from MediNest folder structure
+/MediNest/           /                    301
+/MediNest/index.html /                    301
+/MediNest/*          /:splat              301
+
+# 404 fallback
+/*                   /index.html          404
