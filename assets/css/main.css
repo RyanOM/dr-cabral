@@ -724,6 +724,17 @@ section,
   }
 }
 
+/* Anchor scroll offset for elements with IDs */
+[id] {
+  scroll-margin-top: 100px;
+}
+
+@media (max-width: 1199px) {
+  [id] {
+    scroll-margin-top: 76px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
